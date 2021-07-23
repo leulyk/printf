@@ -1,6 +1,7 @@
-			Custom printf function 
+Custom printf function 
 ------------------------------------------------------------------------------------------------
 Built as a project for the alx software engineering program. 
+
 By Shelter Mashonganyika and Leul Yiheyis
 
 Authorized functions and macros
