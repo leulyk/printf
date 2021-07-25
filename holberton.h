@@ -13,8 +13,8 @@
  */
 typedef struct printer
 {
-  char ch;
-  int (*print)(va_list);
+	char ch;
+	int (*print)(va_list);
 } printer_t;
 
 int _printf(const char *format, ...);
