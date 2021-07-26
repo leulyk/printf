@@ -23,7 +23,7 @@ int _printf(const char *format, ...)
 	va_start(data, format);
 	while (*format && *(format + index))
 	{
-		while (*(format + index) != '%' && *(format + index) != '\\')
+		while (*(format + index) != '%')
 		{
 			if (*(format + index))
 				_putchar(*(format + index));
@@ -34,11 +34,6 @@ int _printf(const char *format, ...)
 		}
 		if (!format[index])
 			return (count);
-		if (*(format + index) == '\\')
-		{
-			index++;
-			print_special(*(format + index));
-		}
 		else if (*(format + index) == '%')
 		{
 			index++;
@@ -87,48 +82,4 @@ int process_format(va_list list, char ch)
 		++j;
 	}
 	return (count);
-}
-/**
- * print_special - prints special characters
- *
- * @ch: character with special value succeeding \
- *
- */
-void print_special(char ch)
-{
-	switch (ch)
-	{
-		case '\\':
-			_putchar('\\');
-			break;
-		case '\"':
-			_putchar('\"');
-			break;
-		case '\'':
-			_putchar('\'');
-			break;
-		case 'a':
-			_putchar('\a');
-			break;
-		case 'b':
-			_putchar('\b');
-			break;
-		case 'n':
-			_putchar('\n');
-			break;
-		case 't':
-			_putchar('\t');
-			break;
-		case 'r':
-			_putchar('\r');
-			break;
-		case 'f':
-			_putchar('\f');
-			break;
-		case 'v':
-			_putchar('\v');
-			break;
-		default:
-			break;
-	}
 }
