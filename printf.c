@@ -21,8 +21,19 @@ int _printf(const char *format, ...)
 
 	index = count = 0;
 	va_start(data, format);
-	while (*(format + index))
+	while (*format && *(format + index))
 	{
+		while (*(format + index) != '%' && *(format + index) != '\\')
+		{
+			if (*(format + index))
+				_putchar(*(format + index));
+			else
+				break;
+			count++;
+			index++;
+		}
+		if (!format[index])
+			return (count);
 		if (*(format + index) == '\\')
 		{
 			index++;
@@ -32,17 +43,12 @@ int _printf(const char *format, ...)
 		{
 			index++;
 			c = *(format + index);
-
 			if (c == 'c')
 				_putchar(va_arg(data, int));
 			else if (c == '%')
 				_putchar('%');
 			else
-				count += process_format(data, c) - 1;
-		}
-		else
-		{
-			_putchar(*(format + index));
+				count += process_format(data, c);
 		}
 		index++;
 		count++;

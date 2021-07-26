@@ -33,7 +33,7 @@ int print_string(va_list list)
 		_putchar(*(result + length));
 		++length;
 	}
-	return (length);
+	return (length - 1);
 }
 
 /**
@@ -50,10 +50,12 @@ int print_integer(va_list list)
 	int length, degree, digit;
 
 	num = val;
+	length = 0;
 	if (val < 0)
 	{
 		num = -num;
 		_putchar('-');
+		++length;
 	}
 	temp = num;
 	degree = 0;
@@ -62,7 +64,7 @@ int print_integer(va_list list)
 		temp /= 10;
 		degree++;
 	}
-	length = degree;
+	length += degree;
 	while (degree > 0)
 	{
 		digit = ((num / _pow(10, degree)) % 10);
