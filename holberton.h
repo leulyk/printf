@@ -23,5 +23,10 @@ int process_format(va_list list, char c);
 int print_string(va_list list);
 int print_integer(va_list list);
 unsigned int _pow(int base, int exponent);
+int convert(unsigned int num, int base, char ch);
+int print_octal(va_list list);
+int print_hex_lower(va_list list);
+int print_hex_upper(va_list list);
+int print_binary(va_list list);
 
 #endif
