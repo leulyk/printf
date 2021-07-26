@@ -45,8 +45,8 @@ int print_string(va_list list)
  */
 int print_integer(va_list list)
 {
-	int val = va_arg(list, int);
-	unsigned int num, temp;
+	long val = va_arg(list, long);
+	unsigned long num, temp;
 	int length, degree, digit;
 
 	num = val;
@@ -93,3 +93,4 @@ unsigned int _pow(int base, int exponent)
 		result *= base;
 	return (result);
 }
+
