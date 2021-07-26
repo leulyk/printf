@@ -23,6 +23,5 @@ int process_format(va_list list, char c);
 int print_string(va_list list);
 int print_integer(va_list list);
 unsigned int _pow(int base, int exponent);
-void print_special(char ch);
 
 #endif
