@@ -1,4 +1,6 @@
 #include "holberton.h"
+#include <stdlib.h>
+#include <stdarg.h>
 
 /**
  * print_bigS - Non printable characters
