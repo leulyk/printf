@@ -1,0 +1,68 @@
+
+.TH man 1 "26 July 2021" "1.0" "_printf man page"
+
+.SH NAME
+_printf - prints a stream of characters to the standard output
+
+.SH SYNOPSIS
+
+#include <stdarg.h>
+
+#include <unistd.h>
+
+#include <stddef.h>
+
+int _printf(const char *format, ...);
+
+.SH DESCRIPTION
+
+The function _printf a custom function built for the alx software engineering program. It is supposed to have a near similar functionality as the printf function from the standard library.
+
+Format Specfiers
+
+d, i -------- integer
+
+c ----------- character
+
+f ----------- floating point number
+
+o ----------- an octal number
+
+b ----------- a binary number
+
+x, X -------- a hexadecimal number
+
+s ----------- a string
+
+u ----------- an unsigned number
+
+p ----------- pointer
+
+r ----------- reversed string
+
+R ----------- Rot13'ed string
+
+Flag characters are -, 0, +, (space), #
+
+Length modifiers are l, h
+
+Precision and width is also handled
+
+.SH OPTIONS
+
+
+
+.SH BUGS
+
+
+
+.SH AUTHORS
+
+Shelter Mashonganyika
+
+Leul Yiheyis
+
+.SH SEE ALSO
+
+
+
