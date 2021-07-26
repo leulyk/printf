@@ -67,6 +67,7 @@ int process_format(va_list list, char ch)
 	int count = 0;
 	printer_t p[] = {
 		{ 's', print_string },
+		{ 'S', print_string_all },
 		{ 'd', print_integer },
 		{ 'i', print_integer },
 		{ 'o', print_octal },
