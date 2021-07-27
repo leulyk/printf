@@ -31,16 +31,14 @@ int _printf(const char *format, ...)
 		{
 			index++;
 			c = *(format + index);
-			if (c == 'c')
-				_putchar(va_arg(data, int));
-			else if (c == '%')
+			if (c == '%')
 				_putchar('%');
 			else
 				count += process_format(data, c);
+			count++;
 		}
 		if (!format[index])
 			return (count);
-		count++;
 	}
 	va_end(data);
 	return (count);
@@ -60,8 +58,10 @@ int process_format(va_list list, char ch)
 	int j = 0;
 	int count = 0;
 	printer_t p[] = {
+		{ 'c', print_char },
 		{ 's', print_string },
 		{ 'S', print_string_all },
+		{ 'r', print_string_rev },
 		{ 'd', print_integer },
 		{ 'i', print_integer },
 		{ 'o', print_octal },
@@ -69,6 +69,7 @@ int process_format(va_list list, char ch)
 		{ 'X', print_hex_upper },
 		{ 'b', print_binary },
 		{ 'u', print_unsigned },
+		{ 'R', print_rot13 },
 		{ 0, NULL }
 	};
 
