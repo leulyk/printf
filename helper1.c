@@ -103,3 +103,39 @@ unsigned int _pow(int base, int exponent)
 	return (result);
 }
 
+/**
+ * print_rot13 - print an encoded a string using rot13
+ *
+ * @list: the string to be encoded
+ *
+ * Description: encode a string using a substitution cipher
+ * which rotates a character in the alphabet by 13 places
+ * and print to standard output
+ *
+ * Return: number of characters printed
+ */
+int print_rot13(va_list list)
+{
+	char *str = va_arg(list, char *);
+	int i, j;
+	char alpha[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char cipher[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
+	int found;
+
+	for (i = 0; str[i] != '\0'; ++i)
+	{
+		found = 0;
+		for (j = 0; alpha[j] != '\0'; ++j)
+		{
+			if (str[i] == alpha[j])
+			{
+				_putchar(cipher[j]);
+				found = 1;
+				break;
+			}
+		}
+		if (!found)
+			_putchar(str[i]);
+	}
+	return (_strlen(str) - 1);
+}
