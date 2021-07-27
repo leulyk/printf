@@ -2,6 +2,21 @@
 #include "holberton.h"
 
 /**
+ * print_char - prints a character
+ *
+ * @list: the variable argument list
+ *
+ * Return: (0)
+ */
+int print_char(va_list list)
+{
+	char ch = va_arg(list, int);
+
+	_putchar(ch);
+	return (0);
+}
+
+/**
  * print_string_all - prints a string to standard output
  *
  * @list: the variable argument list
@@ -61,4 +76,36 @@ int print_string(va_list list)
 		++length;
 	}
 	return (length - 1);
+}
+
+/**
+ * print_string_rev - print reverse of a string
+ *
+ * @list: variable argument list
+ *
+ * Return: number of characters printed
+ */
+int print_string_rev(va_list list)
+{
+	int i, len;
+	char *str = va_arg(list, char *);
+
+	len = _strlen(str);
+	for (i = len - 1; i >= 0; --i)
+		_putchar(*(str + i));
+	return (len - 1);
+}
+
+/**
+ * _strlen - evaluate the length of a string
+ * @str: the string to be processed
+ * Return: the length of the the string
+ */
+int _strlen(char *str)
+{
+	int i;
+
+	for (i = 0; str[i] != '\0'; ++i)
+		;
+	return (i);
 }
