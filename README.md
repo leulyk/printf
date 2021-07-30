@@ -4,8 +4,8 @@ This is a custom printf function built as a project for the alx software enginee
 
 ## Contributors
 	
-	**Shelter V  Mashonganyika**
-	**Leul Yiheyis**
+	Shelter V  Mashonganyika
+	Leul Yiheyis
 	
 ## Authorized functions and macros
 
