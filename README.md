@@ -20,9 +20,13 @@ This is a custom printf function built as a project for the alx software enginee
 - [x] **0. I'm not going anywhere. You can print that wherever you want to. I'm here and I'm a Spur for life**
 
 	Write a function that produces output according to a format.
+
 		Prototype: int _printf(const char *format, ...);
+
 		Returns: the number of characters printed (excluding the null byte used to end output to strings)
+
 		Write output to stdout, the standard output stream
+
 		Handle the conversion specifiers c, s, %
 
 - [x] **1. Education is when you read the fine print. Experience is what you get if you don't**
@@ -36,6 +40,7 @@ This is a custom printf function built as a project for the alx software enginee
 - [x] **3. With a face like mine, I do better in print**
 
 	Handle the following custom conversion specifiers:
+
     		b: the unsigned int argument is converted to binary
 
 - [x] **4. What one has not experienced, one will never understand in print**
@@ -53,6 +58,7 @@ This is a custom printf function built as a project for the alx software enginee
 - [x] **7. My weakness is wearing too much leopard print**
 
 	Handle the following custom conversion specifier:
+
     		S : prints the string.
     		Non printable characters (0 < ASCII value < 32 or >= 127) are printed this way: \x,
 		followed by the ASCII code value in hexadecimal (upper case - always 2 characters)
@@ -65,6 +71,7 @@ This is a custom printf function built as a project for the alx software enginee
 - [x] **9. Sarcasm is lost in print**
 
 	Handle the following length modifiers for non-custom conversion specifiers: l, h
+
 		Conversion specifiers to handle: d, i, u, o, x, X
 
 - [ ] **10. Print some money and give it to us for the rain forests**
