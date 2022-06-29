@@ -1,4 +1,4 @@
-# [0x11. C - printf](https://github.com/leulyk/printf)
+# [0x11. C - printf](https://github.com/leulyk/printf) - (Not fully implemented)
 
 This is a custom printf function built as a project for the alx software engineering program. 
 
